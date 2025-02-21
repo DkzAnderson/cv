@@ -35,6 +35,7 @@ body{
 main{
     position: relative;
     width: 1000px;
+    scale: .9;
     display: flex;
     flex-direction: column;
 

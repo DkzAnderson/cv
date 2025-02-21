@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --primary-color: #1d71df;
+    --secondary-color: #a3bcdd;
+    --background-color: #ffffff;
+
+    --txt-color-1:black;
+    --txt-color-2:#585858;
+
+    --titles: 24px;
+    --subtitles: 20px;
+    --txt: 13px;
+
+    --lab-titles:16px;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    position: relative;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+
+    .line{
+        position: absolute;
+        align-self: flex-start;
+        z-index: 10;
+        width: 100%;
+        height: 6px;
+        background-color: var(--background-color);
+        top: 150px;
+        left: 0;
+    }
+}
+
+.head{
+    position: relative;
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-areas: "empty txt";
+    align-items: end;
+    
+    span{
+        grid-area: txt;
+        display: flex;
+        flex-direction: column;
+        padding: 0 16px;
+    }
+
+    h1{
+        font-size: 52px;
+        font-weight: 400;
+        color: white;
+    }
+
+
+}
+
+.body{
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.body .left-side{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0px 16px;
+    padding-top: 140px;
+
+    background-color: var(--secondary-color);
+
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .photo-box{
+        position: absolute;
+        background-color: white;
+        z-index: 20;
+        width: 70%;
+        height: 260px;
+        top: -130px;
+        left: 50px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: none;
+            background-size: contain;
+        }
+    }
+
+    .contact{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0 12px;
+        gap: 8px;
+        font-size: var(--txt);
+
+        :nth-child(1){
+            font-weight: bold;
+        }
+
+        .li{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            span{
+                background-color: white;
+            }
+        }
+    }
+
+    .skills{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 28px;
+        list-style: disc;
+    }
+}
+
+.body .right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 16px;
+
+    background-color: var(--background-color);
+
+    .resumen-box{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        p{
+            padding: 0 24px;
+        }
+    }
+
+    .bottom-side{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .historial{
+            list-style: none;
+            padding: 0 24px;
+        }
+
+        .historial .main-li{
+            header{
+                display: flex;
+                flex-direction: column;
+
+                span{
+                    font-weight: 500;
+                    font-size: var(--lab-titles);
+                }
+            }
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                padding: 18px 32px ;
+                list-style: disc;
+            }
+        }
+    }
+}
+
+h2{
+    font-weight: bold;
+    font-size: var(--subtitles);
+    color: var(--txt-color-1);
+}
+
+h3{
+    font-weight: 400;
+    color: var(--txt-color-1);
+}
+
+h4{
+    color: var(--txt-color-1);
+    font-size: var(--txt);
+    font-weight: 300;
+}
+
+h5{
+    font-size: var(--txt);
+    font-weight: 400;
+    color: var(--txt-color-2);
+}
+
+p{
+    font-weight: 400;
+    font-size: var(--txt);
+    color: var(--txt-color-2);
+}
